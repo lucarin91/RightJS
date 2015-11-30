@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestJS</title>
+</head>
+<body>
+  <h2>JS Problems!</h2>
+  <ul>
+    <li>without IFFE (Immediately-Invoked Function Expression)</li>
+    <li>without `use strict`</li>
+  </ul>
+  <br/>
+  <b>Result:</b>
+  <div>Hello <span id="span-id"/></div>
+  <br/>
+  <a href="IFFE.html">fix with IFFE</a>
+
+
+  <script>
+    span = document.getElementById('span-id');
+    span.innerHTML = 'World!';
+  </script>
+
+
+  <script>
+    eval("text = 'something goes wrong!'");
+  </script>
+  <script>
+    span.innerHTML = text;
+  </script>
+
+</body>
+</html>

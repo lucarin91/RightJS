@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestJS</title>
+</head>
+<body>
+  <h2>With usestrict and IFFE!</h2>
+  <ul>
+    <li>with IFFE (Immediately-Invoked Function Expression)</li>
+    <li>with `use strict`</li>
+  </ul>
+  <br/>
+  <b>Result:</b>
+  <div>Hello <span id="span-id"/></div>
+
+  <script>
+    (function(){
+      "use strict";
+      var span = document.getElementById('span-id');
+      span.innerHTML = 'World!';
+    }());
+  </script>
+
+
+  <script>
+    eval("text = 'something goes wrong!'");
+  </script>
+  <script>
+    span.innerHTML = text;
+  </script>
+
+</body>
+</html>
